@@ -3,3 +3,9 @@ site-lisp/
 el-get/
 ac-comphist.dat
 places
+elpa/
+ede-projects.el
+projectile-bookmarks.eld
+projectile.cache
+semanticdb/
+srecode-map.el
