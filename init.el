@@ -1,17 +1,14 @@
+;;----------------------------------------------------------------------------
+;; Bootstrap config
+;;----------------------------------------------------------------------------
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(require 'init-utils)
+(require 'init-elpa)
 
-;; Get el-get
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(add-to-list 'load-path "~/.emacs.d/site-lisp/better-defaults")
-(require 'better-defaults)
-
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
-
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
-
-(require 'auto-complete-clang-extension)
+;;----------------------------------------------------------------------------
+;; Load configs for specific features and modes
+;;----------------------------------------------------------------------------
+(require 'init-cc)
+(require 'init-helm)
+(require 'init-helm-gtags)
+(require 'init-gui)
