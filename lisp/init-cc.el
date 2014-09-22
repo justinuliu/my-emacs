@@ -1,10 +1,3 @@
-;;----------------------------------------------------------------------------
-;; Init cedet
-;;----------------------------------------------------------------------------
-(load-file (expand-file-name "site-lisp/cedet/cedet-devel-load.el"
-                             user-emacs-directory))
-(load-file (expand-file-name "site-lisp/cedet/contrib/cedet-contrib-load.el"
-                             user-emacs-directory))
 
 (require 'cc-mode)
 (require 'semantic)
