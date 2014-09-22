@@ -125,14 +125,15 @@
 ;;----------------------------------------------------------------------------
 ;; Init smartparens
 ;;----------------------------------------------------------------------------
-(require-package 'smartparens)
-(show-smartparens-global-mode +1)
-(smartparens-global-mode 1)
+;; (require-package 'smartparens)
+;; (show-smartparens-global-mode +1)
+;; (smartparens-global-mode 1)
 
 ;;----------------------------------------------------------------------------
 ;; Init projectile
 ;;----------------------------------------------------------------------------
 (require-package 'projectile)
+(require-package 'helm-projectile)
 (projectile-global-mode)
 (setq projectile-enable-caching t)
 
