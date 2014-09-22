@@ -28,3 +28,5 @@
 (require 'init-slime)
 (require 'init-git)
 (require 'init-github)
+(require 'init-editing-utils)
+(require 'init-vc)
