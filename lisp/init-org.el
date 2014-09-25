@@ -19,6 +19,8 @@
 
 (require 'org)
 (require 'org-depend)
+(require 'ox-taskjuggler)
+(add-to-list 'org-export-backends 'taskjuggler)
 
 (define-key global-map (kbd "C-c l") 'org-store-link)
 (define-key global-map (kbd "C-c a") 'org-agenda)
@@ -84,8 +86,8 @@
 (setq org-clock-out-remove-zero-time-clocks t)
 
 ;; Show clock sums as hours and minutes, not "n days" etc.
-;; (setq org-time-clocksum-format
-;;       '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
+(setq org-time-clocksum-format
+      '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
 
 ;; Show the clocked-in task - if any - in the header line
 (defun sanityinc/show-org-clock-in-header-line ()
