@@ -4,9 +4,10 @@
 ;; http://lists.common-lisp.net/pipermail/slime-devel/2012-February/018470.html
 (mapc #'delete-file
       (file-expand-wildcards (concat user-emacs-directory "elpa/slime-2*/contrib/*.elc")))
-
-(require-package 'ac-slime)
+(require-package 'slime-company)
 (require-package 'hippie-expand-slime)
+;;(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "elpa/slime-company-*" user-emacs-directory))
 
 
 ;;; Lisp buffers
@@ -43,9 +44,8 @@
   (define-key slime-repl-mode-map (kbd "TAB") 'indent-for-tab-command)
 
   (add-hook 'slime-repl-mode-hook 'sanityinc/slime-repl-setup))
+(require 'slime-company-autoloads)
 
-(after-load 'auto-complete
-  (add-to-list 'ac-modes 'slime-repl-mode))
-
+;;(slime-setup '(slime-company))
 
 (provide 'init-slime)

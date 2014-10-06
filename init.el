@@ -21,6 +21,7 @@
 (require 'init-cc)
 (require 'init-helm)
 (require 'init-helm-gtags)
+(require 'init-rtags)
 (require 'init-gui)
 (require 'init-markdown)
 (require 'init-org)

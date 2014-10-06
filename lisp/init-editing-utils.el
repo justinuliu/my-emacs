@@ -350,5 +350,11 @@ With arg N, insert N newlines."
 (guide-key-mode 1)
 (diminish 'guide-key-mode)
 
+;;----------------------------------------------------------------------------
+;; iedit
+;;----------------------------------------------------------------------------
+(require-package 'iedit)
+(define-key global-map (kbd "C-c ;") 'iedit-mode)
+
 
 (provide 'init-editing-utils)
