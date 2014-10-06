@@ -356,5 +356,14 @@ With arg N, insert N newlines."
 (require-package 'iedit)
 (define-key global-map (kbd "C-c ;") 'iedit-mode)
 
+;;----------------------------------------------------------------------------
+;; window size
+;;----------------------------------------------------------------------------
+(global-set-key [(control -)] 'shrink-window)
+(global-set-key [(control =)] (lambda () (interactive) (shrink-window -1)))
+
+(global-set-key [(control meta -)] 'shrink-window-horizontally)
+(global-set-key [(control meta =)] (lambda () (interactive)
+                                     (shrink-window-horizontally -1)))
 
 (provide 'init-editing-utils)
