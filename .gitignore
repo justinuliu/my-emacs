@@ -11,3 +11,5 @@ semanticdb/
 srecode-map.el
 /irony/
 /.org-id-locations
+/eshell/
+/.bookmarks.el
