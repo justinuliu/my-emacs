@@ -41,6 +41,27 @@
 ;; hs-minor-mode for folding source code
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 
+;; irony
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+;; replace the `completion-at-point' and `complete-symbol' bindings in
+;; irony-mode's buffers by irony-mode's function
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map [remap completion-at-point]
+    'irony-completion-at-point-async)
+  (define-key irony-mode-map [remap complete-symbol]
+    'irony-completion-at-point-async))
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-irony))
+
+;; (optional) adds CC special commands to `company-begin-commands' in order to
+;; trigger completion at interesting places, such as after scope operator
+;;     std::|
+(add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
+
 ;;----------------------------------------------------------------------------
 ;; Init coding style
 ;;----------------------------------------------------------------------------
@@ -54,22 +75,25 @@
 ;; “python”: What Python developers use for extension modules
 ;; “java”: The default style for java-mode (see below)
 ;; “user”: When you want to define your own style
-(setq
- c-default-style "linux" ;; set style to "linux"
- )
+;; (setq
+;;  c-default-style "linux" ;; set style to "linux"
+;;  )
 
-(global-set-key (kbd "RET") 'newline-and-indent)  ; automatically indent when press RET
+;;(global-set-key (kbd "RET") 'newline-and-indent)  ; automatically indent when press RET
 
 ;; activate whitespace-mode to view all whitespace characters
-(global-set-key (kbd "C-c w") 'whitespace-mode)
+;;(global-set-key (kbd "C-c w") 'whitespace-mode)
 
 ;; show unncessary whitespace that can mess up your diff
-(add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
+;;(add-hook 'prog-mode-hook (lambda () (interactive) (setq show-trailing-whitespace 1)))
 
 ;; use space to indent by default
-(setq-default indent-tabs-mode nil)
+;;(setq-default indent-tabs-mode nil)
 ;; set appearance of a tab that is represented by 4 spaces
-(setq-default tab-width 4)
+;;(setq-default tab-width 4)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+
 
 ;;----------------------------------------------------------------------------
 ;; Init compilation
@@ -94,14 +118,14 @@
 ;;----------------------------------------------------------------------------
 ;; Init clean aindent mode
 ;;----------------------------------------------------------------------------
-(require-package 'clean-aindent-mode)
-(add-hook 'prog-mode-hook 'clean-aindent-mode)
+;; (require-package 'clean-aindent-mode)
+;; (add-hook 'prog-mode-hook 'clean-aindent-mode)
 
 ;;----------------------------------------------------------------------------
 ;; Init dtrt indent
 ;;----------------------------------------------------------------------------
-(require-package 'dtrt-indent)
-(dtrt-indent-mode 1)
+;; (require-package 'dtrt-indent)
+;; (dtrt-indent-mode 1)
 
 ;;----------------------------------------------------------------------------
 ;; Init ws butler
