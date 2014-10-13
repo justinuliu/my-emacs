@@ -154,4 +154,22 @@
 (projectile-global-mode)
 (setq projectile-enable-caching t)
 
+;;----------------------------------------------------------------------------
+;; Init cpplint
+;;----------------------------------------------------------------------------
+(require-package 'flycheck-google-cpplint)
+(require-package 'helm-flycheck)
+
+(eval-after-load 'flycheck
+  '(progn
+     (require 'flycheck-google-cpplint)
+     ;; Add Google C++ Style checker.
+     ;; In default, syntax checked by Clang and Cppcheck.
+     (flycheck-add-next-checker 'c/c++-clang
+                                'c/c++-googlelint 'append)))
+
+(require 'helm-flycheck) ;; Not necessary if using ELPA package
+(eval-after-load 'flycheck
+  '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
+
 (provide 'init-cc)
