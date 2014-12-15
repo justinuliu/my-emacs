@@ -31,3 +31,4 @@
 (require 'init-github)
 (require 'init-editing-utils)
 (require 'init-vc)
+(require 'init-python)

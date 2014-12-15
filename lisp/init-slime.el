@@ -1,3 +1,4 @@
+(setq slime-contribs '(slime-fancy))
 (require-package 'slime)
 ;; package.el compiles the contrib subdir, but the compilation order
 ;; causes problems, so we remove the .elc files there. See
@@ -44,8 +45,8 @@
   (define-key slime-repl-mode-map (kbd "TAB") 'indent-for-tab-command)
 
   (add-hook 'slime-repl-mode-hook 'sanityinc/slime-repl-setup))
-(require 'slime-company-autoloads)
+;;(require 'slime-company-autoloads)
 
-;;(slime-setup '(slime-company))
+(slime-setup '(slime-company))
 
 (provide 'init-slime)
