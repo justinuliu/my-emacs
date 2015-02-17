@@ -366,4 +366,9 @@ With arg N, insert N newlines."
 (global-set-key [(control meta =)] (lambda () (interactive)
                                      (shrink-window-horizontally -1)))
 
+;;----------------------------------------------------------------------------
+;; highlight line
+;;----------------------------------------------------------------------------
+(global-hl-line-mode)
+
 (provide 'init-editing-utils)
