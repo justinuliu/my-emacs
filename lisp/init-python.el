@@ -6,5 +6,6 @@
 (elpy-enable)
 (setq elpy-rpc-backend "jedi")
 (elpy-use-ipython)
-
+;; change key for pop tag
+(define-key elpy-mode-map (kbd "M-,") 'pop-tag-mark)
 (provide 'init-python)
