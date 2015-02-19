@@ -167,5 +167,9 @@
 (eval-after-load 'flycheck
   '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
 (add-hook 'c++-mode-hook 'flycheck-mode)
+(add-hook 'c-mode-hook 'flycheck-mode)
+
+;; define show summary
+(define-key c++-mode-map (kbd "C-c s") 'semantic-ia-show-summary)
 
 (provide 'init-cc)
