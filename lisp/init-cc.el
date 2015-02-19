@@ -57,6 +57,10 @@
 ;;     std::|
 (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
 
+;; Init company-quickhelp-mode
+(require-package 'company-quickhelp)
+(company-quickhelp-mode)
+
 ;;----------------------------------------------------------------------------
 ;; Init coding style
 ;;----------------------------------------------------------------------------
