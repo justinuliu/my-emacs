@@ -37,6 +37,7 @@
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 
 ;; irony
+(require-package 'irony)
 (add-hook 'c++-mode-hook 'irony-mode)
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
