@@ -20,6 +20,7 @@
 (require 'org)
 (require 'org-depend)
 (require 'ox-taskjuggler)
+
 (add-to-list 'org-export-backends 'taskjuggler)
 
 (define-key global-map (kbd "C-c l") 'org-store-link)
@@ -52,11 +53,11 @@
                            ("TODO" "TASK") ()))
 
 ; Refile targets include this file and any file contributing to the agenda - up to 5 levels deep
-(setq org-refile-targets (quote ((nil :maxlevel . 5) (org-agenda-files :maxlevel . 5))))
+(setq org-refile-targets (quote ((nil :maxlevel . 9) (org-agenda-files :maxlevel . 9))))
 ; Targets start with the file name - allows creating level 1 tasks
 (setq org-refile-use-outline-path (quote file))
 ; Targets complete in steps so we start with filename, TAB shows the next level of targets etc
-(setq org-outline-path-complete-in-steps t)
+(setq org-outline-path-complete-in-steps nil)
 
 ;; Set global todo keywords
 (setq org-todo-keywords
