@@ -354,6 +354,7 @@ With arg N, insert N newlines."
 ;; iedit
 ;;----------------------------------------------------------------------------
 (require-package 'iedit)
+(setq iedit-toggle-key-default nil)
 (define-key global-map (kbd "C-c ;") 'iedit-mode)
 
 ;;----------------------------------------------------------------------------
