@@ -1,5 +1,6 @@
 (require-package 'unfill)
 (require-package 'whole-line-or-region)
+(require 'diminish)
 
 (when (fboundp 'electric-pair-mode)
   (electric-pair-mode))
