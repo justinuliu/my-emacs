@@ -11,6 +11,7 @@
                                           user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp/org-mode/contrib/lisp"
                                           user-emacs-directory))
+(setq org-directory "~/ownCloud/org")
 (require-package 'org-fstree)
 (when *is-a-mac*
   (require-package 'org-mac-link)
