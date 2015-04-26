@@ -169,4 +169,8 @@
 ;; define show summary
 (define-key c++-mode-map (kbd "C-c s") 'semantic-ia-show-summary)
 
+;; init bison-mode
+(require-package 'bison-mode)
+(add-to-list 'auto-mode-alist '("\\.yy\\'" . bison-mode))
+
 (provide 'init-cc)
