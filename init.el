@@ -19,7 +19,7 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 (require 'init-cc)
-(require 'init-helm)
+(require 'init-helm-projectile)
 (require 'init-helm-gtags)
 (require 'init-gui)
 (require 'init-markdown)
