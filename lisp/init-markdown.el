@@ -2,5 +2,6 @@
 
 (setq auto-mode-alist
       (cons '("\\.\\(md\\|markdown\\)\\'" . markdown-mode) auto-mode-alist))
+(add-hook 'markdown-mode-hook 'orgtbl-mode)
 
 (provide 'init-markdown)
