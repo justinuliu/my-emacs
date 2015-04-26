@@ -13,3 +13,5 @@ srecode-map.el
 /.org-id-locations
 /eshell/
 /.bookmarks.el
+/.python-environments/
+/games/
