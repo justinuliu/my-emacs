@@ -147,15 +147,6 @@
 ;; (smartparens-global-mode 1)
 
 ;;----------------------------------------------------------------------------
-;; Init projectile
-;;----------------------------------------------------------------------------
-(require-package 'projectile)
-(require-package 'helm-projectile)
-(projectile-global-mode)
-(setq projectile-enable-caching t)
-(setq projectile-completion-system 'helm)
-
-;;----------------------------------------------------------------------------
 ;; Init cpplint
 ;;----------------------------------------------------------------------------
 (require-package 'flycheck-google-cpplint)
