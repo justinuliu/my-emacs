@@ -70,6 +70,14 @@
 ;; Set global tags
 (setq org-tag-alist '(("@office" . ?o) ("@home" . ?h)))
 
+;; Set global effort
+(setq org-global-properties '(("Effort_ALL". "1d 2d 3d 5d 10d 20d 30d")))
+
+;; Set global columns
+(setq org-columns-default-format "%55ITEM(Task) %10TODO(State) %15SCHEDULED(Start) %10Effort(Effort){:} %10CLOCKSUM")
+
+;; Set ordered dependence
+(setq org-enforce-todo-dependencies t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Org clock
@@ -81,7 +89,7 @@
 (setq org-clock-in-resume t)
 
 ;; Change task state to STARTED when clocking in
-(setq org-clock-in-switch-to-state "STARTED")
+;;(setq org-clock-in-switch-to-state "STARTED")
 ;; Save clock data and notes in the LOGBOOK drawer
 (setq org-clock-into-drawer t)
 ;; Removes clocked tasks with 0:00 duration
