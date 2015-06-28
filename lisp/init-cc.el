@@ -42,6 +42,9 @@
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 
+;;; company-irony
+(require-package 'company-irony)
+
 ;; replace the `completion-at-point' and `complete-symbol' bindings in
 ;; irony-mode's buffers by irony-mode's function
 (defun my-irony-mode-hook ()
@@ -75,6 +78,9 @@
 ;; “python”: What Python developers use for extension modules
 ;; “java”: The default style for java-mode (see below)
 ;; “user”: When you want to define your own style
+
+(require-package 'google-c-style)
+
 ;; (setq
 ;;  c-default-style "linux" ;; set style to "linux"
 ;;  )
