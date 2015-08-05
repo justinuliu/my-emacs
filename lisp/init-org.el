@@ -74,7 +74,8 @@
 (setq org-global-properties '(("Effort_ALL". "1d 2d 3d 5d 10d 20d 30d")))
 
 ;; Set global columns
-(setq org-columns-default-format "%55ITEM(Task) %10TODO(State) %15SCHEDULED(Start) %10Effort(Effort){:} %10CLOCKSUM")
+(setq org-columns-default-format
+      "%45ITEM(Task) %TODO %3PRIORITY %SCHEDULED %Effort{:} %TAGS")
 
 ;; Set ordered dependence
 (setq org-enforce-todo-dependencies t)
