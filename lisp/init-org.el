@@ -182,4 +182,7 @@
      (sql . nil)
      (sqlite . t))))
 
+;; export with scheuled deadline etc..
+(setq org-export-with-planning t)
+
 (provide 'init-org)
