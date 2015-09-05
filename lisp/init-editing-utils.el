@@ -373,4 +373,10 @@ With arg N, insert N newlines."
 ;;----------------------------------------------------------------------------
 (global-hl-line-mode)
 
+(add-to-list 'load-path "~/.emacs.d/site-lisp/window-numbering")
+(require 'window-numbering)
+(window-numbering-mode t)
+(setq window-numbering-assign-func
+      (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
+
 (provide 'init-editing-utils)
