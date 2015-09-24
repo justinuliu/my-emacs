@@ -1,7 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/pdee")
 (require-package 'python-mode)
-(require 'python-mode)
 (require-package 'elpy)
+(require 'python-mode)
 (require 'elpy)
 
 ;; Initialize elpy
