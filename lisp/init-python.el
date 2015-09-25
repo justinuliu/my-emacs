@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/site-lisp/pdee")
 (require-package 'python-mode)
 (require-package 'elpy)
 (require 'python-mode)
@@ -11,7 +10,7 @@
 (elpy-use-ipython)
 ;; change key for pop tag
 (define-key elpy-mode-map (kbd "M-,") 'pop-tag-mark)
-
+;;; Initialize company-jedi-el
 (require-package 'company-jedi)
 (defun my/python-mode-hook ()
   (add-to-list 'company-backends 'company-jedi))
