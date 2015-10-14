@@ -1,15 +1,13 @@
 (require-package 'python-mode)
-(require-package 'elpy)
 (require 'python-mode)
-(require 'elpy)
 
-;; Initialize elpy
-(package-initialize)
-(elpy-enable)
-;;(setq elpy-rpc-backend "jedi")
-(elpy-use-ipython)
-;; change key for pop tag
-(define-key elpy-mode-map (kbd "M-,") 'pop-tag-mark)
+(setq auto-mode-alist
+      (append '(("SConstruct\\'" . python-mode)
+                ("SConscript\\'" . python-mode))
+              auto-mode-alist))
+
+(require-package 'pip-requirements)
+
 ;;; Initialize company-jedi-el
 (require-package 'company-jedi)
 (defun my/python-mode-hook ()
