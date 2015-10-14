@@ -22,6 +22,7 @@
 (require 'init-helm-projectile)
 (require 'init-helm-gtags)
 (require 'init-gui)
+(require 'init-fonts)
 (require 'init-markdown)
 (require 'init-org)
 (require 'init-lisp)
@@ -36,3 +37,5 @@
 (require 'init-html)
 (require 'init-php)
 (require 'init-sql)
+(require 'init-compile)
+(require 'init-xterm)
