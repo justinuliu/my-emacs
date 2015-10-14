@@ -31,3 +31,8 @@
 (require 'init-editing-utils)
 (require 'init-vc)
 (require 'init-python)
+(require 'init-javascript)
+(require 'init-css)
+(require 'init-html)
+(require 'init-php)
+(require 'init-sql)
