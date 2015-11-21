@@ -75,7 +75,7 @@
 
 ;; Set global columns
 (setq org-columns-default-format
-      "%45ITEM(Task) %TODO %3PRIORITY %SCHEDULED %Effort{:} %TAGS")
+      "%45ITEM(Task) %TODO %3PRIORITY %SCHEDULED %DEADLINE %Effort{:} %TAGS")
 
 ;; Set ordered dependence
 (setq org-enforce-todo-dependencies t)
