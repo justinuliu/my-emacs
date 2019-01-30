@@ -1,5 +1,5 @@
 (require-package 'magit)
-(require-package 'git-blame)
+(require-package 'git-blamed)
 ;;(require-package 'git-commit-mode)
 ;;(require-package 'git-rebase-mode)
 (require-package 'gitignore-mode)
