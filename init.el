@@ -25,6 +25,7 @@
 (require 'init-fonts)
 (require 'init-markdown)
 (require 'init-org)
+(require 'init-task)
 (require 'init-editing-utils)
 (require 'init-paredit)
 (require 'init-lisp)
@@ -45,9 +46,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-trello-current-prefix-keybinding "C-c o")
  '(package-selected-packages
    (quote
-    (which-key try use-package alert sql-indent smarty-mode php-mode yagist whole-line-or-region unfill solarized-theme slime-company skewer-less scss-mode sass-mode rainbow-mode rainbow-delimiters python-mode pip-requirements mmm-mode markdown-mode magit-gh-pulls lively json-mode js-comint ipretty hippie-expand-slime helm-projectile helm-gtags gitignore-mode github-clone github-browse-file gitconfig-mode git-timemachine git-messenger fullframe elisp-slime-nav diff-hl default-text-scale css-eldoc company-jedi coffee-mode bug-reference-github auto-compile ac-js2))))
+    (org-trello which-key try use-package alert sql-indent smarty-mode php-mode yagist whole-line-or-region unfill solarized-theme slime-company skewer-less scss-mode sass-mode rainbow-mode rainbow-delimiters python-mode pip-requirements mmm-mode markdown-mode magit-gh-pulls lively json-mode js-comint ipretty hippie-expand-slime helm-projectile helm-gtags gitignore-mode github-clone github-browse-file gitconfig-mode git-timemachine git-messenger fullframe elisp-slime-nav diff-hl default-text-scale css-eldoc company-jedi coffee-mode bug-reference-github auto-compile ac-js2))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
