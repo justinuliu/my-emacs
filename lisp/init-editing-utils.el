@@ -320,6 +320,7 @@ With arg N, insert N newlines."
 
 (require-package 'highlight-escape-sequences)
 (add-hook 'after-init-hook 'hes-mode)
+(add-hook 'after-init-hook 'global-visual-line-mode)
 
 
 
